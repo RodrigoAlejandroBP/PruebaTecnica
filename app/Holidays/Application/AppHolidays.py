@@ -3,6 +3,11 @@ from sqlalchemy.orm import Session
 from ..Services.HolidaysServices import HolidayService
 import os
 import requests
+from datetime import datetime
+import locale
+
+locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')  # Establece el locale a español de España (UTF-8)
+
 
 class AppHolidays:
     """
@@ -98,6 +103,10 @@ class AppHolidays:
         """
 
         for feriado in data:
+            fecha = datetime.strptime(feriado['fecha'],"%Y-%m-%d" )
+            if not fecha:
+                continue 
+            
             # Utilizar el método create_holiday del servicio para persistir el objeto
-            self.holidays_service.create_holiday(nombreFeriado=feriado['nombre'], fecha=feriado['fecha'], tipo=feriado['tipo'], descripcion=feriado['comentarios'],dia_semana=feriado['fecha'].totext )
+            self.holidays_service.create_holiday(nombreFeriado=feriado['nombre'], fecha=feriado['fecha'], tipo=feriado['tipo'], descripcion=feriado['comentarios'],dia_semana= fecha.strftime("%A"),irrenunciable=feriado['irrenunciable'])
         return True 
