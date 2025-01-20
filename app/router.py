@@ -1,4 +1,3 @@
 from fastapi import APIRouter
-
-holidays_router = APIRouter(prefix="/holidays", tags=["holidays"])
+from app.Holidays.routes.holidaysRouter import holidays_router
 

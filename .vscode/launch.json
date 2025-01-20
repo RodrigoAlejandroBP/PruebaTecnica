@@ -15,7 +15,10 @@
                 "--reload"
             ],
             "jinja": true,
-            "cwd": "${workspaceFolder}"  // Ensure this points to the root of your project
+            "cwd": "${workspaceFolder}" ,
+            "env": {
+                "PYTHONTRACEMALLOC": "1" 
+            } // Ensure this points to the root of your project
         }
     ]
 }
