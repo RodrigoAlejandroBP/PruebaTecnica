@@ -1,4 +1,4 @@
-# PruebaTecnica
+# PruebaTecnica FastAPI
 Prueba Tecnica Desarrollador Python
 
 Crear un script en Python que consulte la API de feriados de Chile (https://apis.digital.gob.cl/fl/feriados/2024) para obtener los feriados del año. Manejar errores, como si la API no responde.
