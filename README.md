@@ -18,3 +18,9 @@ json
     "dia_semana": "Miércoles"
 }
 Entregables: Código fuente, scripts para la base de datos y la documentación de la API (en formato Swagger o similar).
+
+
+#Activar prueba 
+
+"C:\Users\Rodrigo Bravo\Desktop\Prueba Tcnica\PruebaTecnica\.venv\Scripts\activate" 
+uvicorn main:app —reload

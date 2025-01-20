@@ -1,0 +1,9 @@
+#Se ignora el venv. 
+# *.env
+
+/bd
+*.yml
+*.log
+*.pyc
+*.pyo
+__pycache__/
