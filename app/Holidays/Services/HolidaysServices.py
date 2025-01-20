@@ -10,6 +10,8 @@ class HolidayService(IHoliday):
 
 
     def get_all_holidays(self) -> list[Holidays]:
+        # return db.query(Holidays).all() 
+
         return self.session.query(Holidays).all()
 
     def get_holiday_by_date(self, date: date,descripcion) -> Optional[Holidays]:
