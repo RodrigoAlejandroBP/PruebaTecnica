@@ -4,7 +4,7 @@
 #### En caso de que cambie un dia feriado por eventualidad borra el antiguo y lo actualiza al nuevo. 
 #### Para entrar a la documentacion basta con entrar al localhost:puerto/docs.
 #### Tambien tiene la opcion de actualizar los feriados manualmente para los años. 
-
+#### No cuenta con pruebas unitarias por falta de tiempo.
 #### Para ejecutar sin modo debug: uvicorn app.main:app --reload
 
 
