@@ -1,4 +1,7 @@
-version: "3.8"
+
+#Simplemente usar docker compose up y luego docker compose down para detener los servicios
+#Se encuentra corriendo la BD en el puerto 5435, no se hacen configuracion adicionales en el contenedor
+
 services:
   postgres:
     image: postgres:17

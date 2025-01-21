@@ -16,7 +16,9 @@ Base.metadata.create_all(bind=engine)
 @app.on_event("startup")
 async def cron_get_holidays():
     try:
-         get_holidays()
+        await get_holidays()
     except Exception as e:
         print(e)
         print('Error al obtener los feriados')
+        
+    
