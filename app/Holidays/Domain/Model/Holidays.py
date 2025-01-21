@@ -1,22 +1,19 @@
 from sqlalchemy import Column, Integer, String, Date, ForeignKey
 from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
-from app.database.settings import SessionLocal
+from app.database.settings import Base,SessionLocal
 from pydantic import BaseModel
 from datetime import date
 
 
-Base = declarative_base()
-
-class Holidays(BaseModel): 
+class Holidays(Base): 
     __tablename__ = "Holidays"
-    id: int = Column(Integer, primary_key=True, index=True) 
+    id: int = Column(Integer, primary_key=True, index=True,autoincrement=True,nullable=False) 
     nombreFeriado: str = Column(String, nullable=False)
     fecha: date = Column(Date, nullable=False)
     tipo: str = Column(String, nullable=False)
     descripcion: str = Column(String)
     dia_semana:  str = Column(String, nullable=False)
-    irrenunciable: int = Column(Integer, primary_key=True, index=True) 
+    irrenunciable: int = Column(Integer, index=True) 
 
- 
-Base.metadata.create_all(bind=SessionLocal().get_bind())
+
+##Holidays tipo puede ser una tabla con FK a holidays ... 

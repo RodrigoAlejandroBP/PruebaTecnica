@@ -18,7 +18,8 @@
             "cwd": "${workspaceFolder}" ,
             "env": {
                 "PYTHONTRACEMALLOC": "1" 
-            } // Ensure this points to the root of your project
+            }, // Ensure this points to the root of your project
+            "justMyCode": false
         }
     ]
 }

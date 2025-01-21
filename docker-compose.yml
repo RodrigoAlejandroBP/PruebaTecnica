@@ -6,7 +6,7 @@ services:
     ports:
       - "5435:5432"
     volumes:
-      - "C:/Users/Rodrigo Bravo/Desktop/PruebaTecnica/bd/pg:/var/lib/postgresql/data"
+      - "C:/Users/Admin/Desktop/PruebaTecnica/bd/pg:/var/lib/postgresql/data"
     environment:
       - DATABASE_HOST=127.0.0.1
       - POSTGRES_USER=root

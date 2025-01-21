@@ -4,6 +4,7 @@ import os
 from sqlalchemy import create_engine
 
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
 
 # Load environment variables from `.env` file
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -26,6 +27,7 @@ engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 # Create a sessionmaker for creating database sessions
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
 
 def get_db():
     db = SessionLocal()
